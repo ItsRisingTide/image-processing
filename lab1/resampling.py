@@ -35,10 +35,10 @@ def bilinear_interpolate(im, x, y):
     return wa*Ia + wb*Ib + wc*Ic + wd*Id
 
 
-img1 = Image.open("cactus1_resampled_3.jpg")
+img1 = Image.open("cactus1_resampled_1-4.jpg")
 print(img1)
 img1Arr = np.array(img1)
-newImgArr = NNResampling(img1Arr, 1/2)
+newImgArr = NNResampling(img1Arr, 9)
 
-Image.fromarray(newImgArr.astype(np.uint8), 'RGB').save("cactus1_resampled_3-2.jpg")
+Image.fromarray(newImgArr.astype(np.uint8), 'RGB').save("cactus_twoWays.jpg")
 # print(np.shape(img1))
